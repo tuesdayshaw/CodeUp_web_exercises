@@ -17,18 +17,23 @@ var spent = 60;
 
 switch(luckyNumber) {
     case 1:
-        console.log("Your total is $" + (spent * discount1).toFixed(2));
+        console.log("You received a 10% discount!");
+        console.log("Your total is $" + (spent - (spent * discount1)).toFixed(2));
         break;
     case 2:
-        console.log("Your total is $" + (spent * discount2).toFixed(2));
+        console.log("You received a 25% discount!");
+        console.log("Your total is $" + (spent - (spent * discount2)).toFixed(2));
         break;
     case 4:
-        console.log("Your total is $" + (spent * discount4).toFixed(2));
+        console.log("You received a 50% discount!");
+        console.log("Your total is $" + (spent - (spent * discount4)).toFixed(2));
         break;
     case 5:
-        console.log("Your total is $" + (spent * discount5).toFixed(2));
+        console.log("You received a 100% discount!");
+        console.log("Your purchase is free: $" + (spent - (spent * discount5)).toFixed(2));
         break;
     default:
+        console.log("Your purchase did not receive a discount.");
         console.log("Your total is $" + spent.toFixed(2));
         break;
 
@@ -37,7 +42,6 @@ switch(luckyNumber) {
 //Exercise 2:
 
 var monthNumberEntered = Math.floor(Math.random()* 20);
-
 
 switch(monthNumberEntered) {
     case 1:
