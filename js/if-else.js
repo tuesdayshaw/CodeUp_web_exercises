@@ -40,6 +40,16 @@ if (George >= 200) {
     console.log("You did not spend enough.");
 };
 
+// Justin's solution:
+
+//
+// customer = cameron;
+// totalDollarsSpent = cameronSpentDollars;
+
+// if (totalSpentDollars > discountBreakpointDollars) { costDollars = totalSpentDollars - (totalSpentDollars * discountRate);
+// } else { costDollars = totalSpentDollars;}
+
+
 //3
 
 var flipACoin = Math.floor(Math.random()* 2);
