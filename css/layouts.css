@@ -1,0 +1,54 @@
+/* Selectors for embedded CSS. Most common one is an element selector. Selectors have {delimiters}. */
+header {
+    background-color: #000000
+}
+a {
+    color: #008000;
+}
+.top-navigation {
+    font-weight: bold;
+}
+.top-navigation a {
+    color: #FFFF00;
+    text-decoration: none;
+}
+#current {
+    background-color: #0366D6;
+}
+#current a {
+    color: #FFF;
+}
+.pill-nav {
+    border-style: solid;
+    border-color: #8E949A;
+    border-width: 1px;
+    display: block;
+    float;
+}
+ul {
+    list-style: none;
+}
+p > strong {
+    color: #1b6d85;
+}
+/* LoVe HAte (link, visited, hover, active) */
+a:link {
+    color: violet;
+}
+a:visited {
+    text-decoration: line-through;
+    color: red;
+}
+a:hover {
+    font-size: 30px;
+}
+a:active {
+    background-color: green;
+}
+
+/* Which selector is more important?
+1. IDs
+2. Classes
+3. Elements
+ */
+/* Code Smell -Kent Beck (not so good code) */

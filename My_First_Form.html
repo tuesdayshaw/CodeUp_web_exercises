@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My First HTML Form</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/site.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+</head>
+<body>
+    <h2 class="fancy-header">User Login</h2>
+            <form class="form-control" method="POST" action="http://requestb.in/wjblxswj">
+                <label for="username">Username</label>
+                <input id="username" type="text" name="username" placeholder="username"><br>
+                <label for="password">Password</label>
+                <input id="password" type="password" name="password" placeholder="password">
+                <br>
+                <input type="submit" name="submit" value="Login">
+            </form>
+    <h2 class="fancy-header">Compose an Email</h2>
+            <form class="form-control" method="POST" action="http://requestb.in/wjblxswj">
+                <p>
+                    <label for="to">Recipient</label>
+                    <input type="text" name="to" id="to" placeholder="Enter Recipient Email Here">
+                </p>
+                <p>
+                    <label for="from">Sender</label>
+                    <input type="text" name="from" id="from" placeholder="Enter Your Email Here">
+                </p>
+                <p>
+                    <label for="subject">Subject</label>
+                    <input type="text" name="subject" id="subject" placeholder="Enter Subject Line Here">
+                </p>
+                <textarea id="email_body" name="email_body" placeholder="Enter Email Text Here">
+                </textarea>
+                <p>
+                    <label for="save_copy">Do you want to save a copy to your sent folder?</label>
+                    <input type="checkbox" id="save_copy" name="save_copy" value="yes" checked><br>
+                    <button type="submit">Send</button>
+                </p>
+            </form><br>
+    <h2 class="fancy-header">Multiple Choice Test</h2>
+            <form class="form-control" method="POST" action="http://requestb.in/wjblxswj">
+                <p> What color is the sky?</p>
+                <label>
+                    <input type="radio" name="q1" value="blue">
+                    Blue
+                </label><br>
+                <label>
+                    <input type="radio" name="q1" value="green">
+                    Green
+                </label><br>
+                <label>
+                    <input type="radio" name="q1" value="brown">
+                    Brown
+                </label><br>
+                <p> What is the first letter of the Alpabet?</p>
+                <label>
+                    <input type="radio" name="q2" value="D">
+                    D
+                </label><br>
+                <label>
+                    <input type="radio" name="q2" value="E">
+                    E
+                </label><br>
+                <label>
+                    <input type="radio" name="q2" value="A">
+                    A
+                </label><br>
+                <p> How are you?</p>
+                <label>
+                    <input type="radio" name="q3" value="fine">
+                    Fine
+                </label>
+                <label>
+                    <input type="radio" name="q3" value="good">
+                    Good
+                </label>
+                <label>
+                    <input type="radio" name="q3" value="great">
+                    Great
+                </label>
+            </form>
+    <form class="form-control" method="POST" action="http://requestb.in/wjblxswj">
+            <p>What coding languages have you learned?</p>
+            <label><input type="checkbox" id="lang1" name="HTML[]" value="HTML">HTML</label>
+            <label><input type="checkbox" id="lang2" name="CSS" value="CSS">CSS</label>
+            <label><input type="checkbox" id="lang3" name="Javascript[]" value="Javascript">Javascript</label>
+            <br>
+            <p>
+                <label for="pets">Select all the kinds of pets you have owned?</label>
+                <select id="pets" name="pets[]" multiple="multiple">
+                    <option value="dog">Dog</option>
+                    <option value="cat">Cat</option>
+                    <option value="bird">Bird</option>
+                </select>
+                <button type="submit">Submit</button>
+            </p><br>
+    </form>
+
+            <h2 class="fancy-header">Select Testing</h2>
+            <form class="form-control" method="POST" action="http://requestb.in/wjblxswj">
+                <label for="yes_or_no">Select Yes or No</label>
+                <select id="yes_or_no" name="yes_or_no">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+                <button type="submit">Submit</button>
+            </form>
+
+    <h2 class="fancy-header">Date and Time</h2>
+            <form class="form-control" method="POST" action="http://requestb.in/wjblxswj">
+                <label for="date">Date</label>
+                <input id="date" type="date" name="date">
+                <button type="submit">Submit</button>
+            </form>
+            <form class="form-control" method="POST" action="http://requestb.in/wjblxswj">
+                <label for="time">Time</label>
+                <input id="time" type="time" name="time">
+                <button type="submit">Submit</button>
+            </form>
+</body>
+</html>

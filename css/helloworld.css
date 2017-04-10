@@ -1,0 +1,81 @@
+body {
+    padding-top: 50px;
+    padding-right: 80px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+    font-family: 'Architects Daughter', cursive;
+    font-size: 1.5em;
+    color: #8B0000;
+    background-image: url(../img/sakura.png);
+    background-color: #FFDEAD;
+    border-top-style: dotted;
+    border-right-style: solid;
+    border-bottom-style: dotted;
+    border-left-style: solid;
+    border-width: 20px;
+}
+ul {
+    list-style: square;
+}
+h1 {
+    color: #FF4500;
+    text-decoration: underline;
+    font-size: 5em;
+    float: left;
+    text-align: center;
+}
+h1#container {
+    width: 100%;
+}
+#first {
+    clear: both;
+}
+h2 {
+    color: #FF7F50;
+    text-decoration: underline;
+}
+table {
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+    text-align: center;
+}
+td {
+    font-size: 40px;
+}
+tr {
+    font-size: 40px;
+}
+th, td {
+    border: 3px solid black;
+}
+a:link {
+    color: red;
+}
+a:visited {
+    color: black;
+}
+a:hover {
+    color: blue;
+}
+a:active {
+    color: green;
+}
+em, strong {
+    font-size: 1.75em;
+}
+p#car-img {
+    background-image: url(../img/1955-chevy-wagon.jpg);
+    background-repeat: no-repeat;
+}
+p.picture {
+    height: 300px;
+    width: 500px;
+    color: #ffffff;
+    border: double;
+    border-color: #67b168;
+}
+a#forms {
+    float: right;
+}

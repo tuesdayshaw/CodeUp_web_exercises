@@ -1,0 +1,30 @@
+.fancy-header {
+    color: green;
+    text-decoration: underline;
+}
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+h1 {
+    color: #FFFFFF;
+}
+h2 {
+    color: #67AF39;
+}
+.form-control {
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    border-top-style: dotted;
+    border-right-style: solid;
+    border-bottom-style: dotted;
+    border-left-style: solid;
+}
+#pets {
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+
+}

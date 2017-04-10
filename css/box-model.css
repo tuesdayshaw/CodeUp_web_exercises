@@ -1,0 +1,39 @@
+h1 {
+    text-decoration: underline;
+    font-weight: bold;
+}
+.box {
+    border: 1px solid black;
+    height: 50px;
+    width: 150px;
+    padding: 22px;
+    margin: 10px;
+}
+#one {
+    background-color: red;
+
+}
+#two {
+    background-color: orange;
+    margin-left: 30px;
+}
+#three {
+    background-color: yellow;
+    margin-left: 60px;
+
+}
+#four {
+    background-color: green;
+    margin-left: 90px;
+
+}
+#five {
+    background-color: blue;
+    margin-left: 120px;
+
+}
+#six {
+    background-color: violet;
+    margin-left: 150px;
+
+}
