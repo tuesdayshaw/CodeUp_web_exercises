@@ -19,12 +19,10 @@ do {
         allCones -= cones;
         console.log("Sorry, not enough cones left to sell " + cones)
     } else {
-        allCones = 0;
         console.log("Sorry, all sold out!")
     }
-    console.log(cones + " cones sold");
 } while (allCones > 0);
-
+        console.log("All sold!");
 
 //Exercise 2:
 
