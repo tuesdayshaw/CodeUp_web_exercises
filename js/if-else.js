@@ -25,17 +25,17 @@ var George = 320;
 var discount = 0.35;
 
 if (Cameron >= 200) {
-    console.log("Cameron spent $" + Cameron.toFixed(2) + ". Total after discount is $" + (Cameron * discount).toFixed(2));
+    console.log("Cameron spent $" + Cameron.toFixed(2) + ". Total after discount is $" + (Cameron - (Cameron * discount)).toFixed(2));
 } else {
     console.log("You did not spend enough.");
 };
 if (Ryan >= 200) {
-    console.log("Ryan spent $" + Ryan.toFixed(2) + ". Total after discount is $" + (Ryan * discount).toFixed(2));
+    console.log("Ryan spent $" + Ryan.toFixed(2) + ". Total after discount is $" + (Ryan - (Ryan * discount)).toFixed(2));
 } else {
     console.log("You did not spend enough.");
 };
 if (George >= 200) {
-    console.log("George spent $" + George.toFixed(2) + ". Total after discount is $" + (George * discount).toFixed(2));
+    console.log("George spent $" + George.toFixed(2) + ". Total after discount is $" + (George - (George * discount)).toFixed(2));
 } else {
     console.log("You did not spend enough.");
 };

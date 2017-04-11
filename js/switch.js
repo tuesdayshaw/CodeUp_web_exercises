@@ -36,7 +36,6 @@ switch(luckyNumber) {
         console.log("Your purchase did not receive a discount.");
         console.log("Your total is $" + spent.toFixed(2));
         break;
-
 }
 
 //Exercise 2:
