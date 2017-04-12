@@ -15,11 +15,18 @@
 
 var names = ['Tuesday', 'Ian', 'Mike', 'Jackie'];
 
-console.log(names.length);
+//console.log(names.length);
 
-console.log(names[0]);
-console.log(names[1]);
-console.log(names[2]);
-console.log(names[3]);
+//console.log(names[0]);
+//console.log(names[1]);
+//console.log(names[2]);
+//console.log(names[3]);
 
+    for (var i = 0; i < names.length; i++) {
+        console.log(names[i]);
+    }
+
+    names.forEach(function (element, index) {
+        console.log(element + " and the index is: " + index);
+    })
 })();
