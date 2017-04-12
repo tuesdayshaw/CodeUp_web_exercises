@@ -2,7 +2,7 @@
  * Created by canidmars on 4/12/17.
  */
 
-(function() {
+(function(){
 
 
 "use strict";
