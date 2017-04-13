@@ -70,6 +70,7 @@
 
     var meals = ['tacos', 'pizza', 'sandwich', 'salad', 'soup', 'pasta', 'egg rolls', 'sushi', 'curry', 'hot dog', 'burger', 'steak'];
     var days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    var plan = [];
 
     function foodSchedule() {
         for (var i = 0; i < days.length; i++) {
@@ -77,6 +78,7 @@
             console.log(days[i] + " is: " + item);
         }
     }
+
     foodSchedule();
 
     // add a loop to not repeat the meals!!!
@@ -91,16 +93,26 @@
 
 
     var game = [];
-    var dice = ['Strike', 'Score']
+    var dice = ['Strike', 'Score'];
+    var win = ['Score', 'Score', 'Score'];
+    var lose = ['Strike', 'Strike', 'Strike'];
 
     function strike() {
         for (var i = 0; i < 3; i++){
             var rollTheDice = dice[Math.floor(Math.random()*dice.length)];
             game.unshift(rollTheDice);
-
             }
         console.log(game);
+
         }
     strike();
+
+    if (game === win){
+        console.log('You won!');
+    }  else if (game === lose){
+        console.log('You lost!');
+    } else {
+        console.log('Try again!')
+    }
 
 })();
