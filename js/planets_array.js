@@ -75,9 +75,11 @@
     function foodSchedule() {
         for (var i = 0; i < days.length; i++) {
             var item = meals[Math.floor(Math.random() * meals.length)];
+            do {
             plan.unshift(item);
-            console.log(days[i] + " is: " + plan[5]);
+            } while(plan[i] < days[i]);
         }
+        console.log(days[i] + " is: " + plan);
     }
 
     foodSchedule();
