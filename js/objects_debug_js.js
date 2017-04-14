@@ -79,7 +79,7 @@ for (var index = 0; index < orders.length; index += 1) {
     console.log('Toppings');
     // output all the toppings for the order
     order.toppings.forEach(function (topping) {
-        console.log('- ' + order.toppings);
+        console.log('- ' + topping);
     });
 
     console.log('Crust: ' + order.crust);
