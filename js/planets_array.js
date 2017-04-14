@@ -74,8 +74,9 @@
 
     function foodSchedule() {
         for (var i = 0; i < days.length; i++) {
-            var item = meals[Math.floor(Math.random()*meals.length)];
-            console.log(days[i] + " is: " + item);
+            var item = meals[Math.floor(Math.random() * meals.length)];
+            plan.unshift(item);
+            console.log(days[i] + " is: " + plan[5]);
         }
     }
 
@@ -98,21 +99,19 @@
     var lose = ['Strike', 'Strike', 'Strike'];
 
     function strike() {
-        for (var i = 0; i < 3; i++){
-            var rollTheDice = dice[Math.floor(Math.random()*dice.length)];
+        for (var i = 0; i < 3; i++) {
+            var rollTheDice = dice[Math.floor(Math.random() * dice.length)];
             game.unshift(rollTheDice);
-            }
+        }
         console.log(game);
 
+        if (game == win) {
+            console.log('You won!');
+        } else if (game == lose) {
+            console.log('You lost!');
+        } else {
+            console.log('Try again!')
         }
-    strike();
-
-    if (game === win){
-        console.log('You won!');
-    }  else if (game === lose){
-        console.log('You lost!');
-    } else {
-        console.log('Try again!')
     }
-
+    strike();
 })();
