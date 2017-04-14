@@ -79,12 +79,11 @@ Create 2 functions:
 
 //1:
 
-function randomNumber(number) {
-    return (random = Math.floor((Math.random()*Math.max(number))+Math.min(number)));
+function randomNumber(max, min) {
+    return random = Math.floor(Math.random()* (max - min))+ min;
+}
 
-};
-
-console.log(randomNumber(678, 600));
+console.log(randomNumber(200, 100));
 
 
 // 2:

@@ -70,19 +70,14 @@
 
     var meals = ['tacos', 'pizza', 'sandwich', 'salad', 'soup', 'pasta', 'egg rolls', 'sushi', 'curry', 'hot dog', 'burger', 'steak'];
     var days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-    var plan = [];
+    var i;
 
-    function foodSchedule() {
         for (var i = 0; i < days.length; i++) {
-            var item = meals[Math.floor(Math.random() * meals.length)];
-            plan.splice(item, 5);
+            var item = Math.floor(Math.random() * meals.length);
+            var selected = meals.splice(item, 1);
+            console.log(days[i] + " is: " + selected);
         }
-        console.log(days[i] + " is: " + plan);
-    }
 
-    foodSchedule();
-
-    // add a loop to not repeat the meals!!!
 
 
 
