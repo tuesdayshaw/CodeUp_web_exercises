@@ -168,8 +168,25 @@
         sleepy: false,
         happy: true,
         petFood: 10,
-        soap: 3
+        soap: 3,
+        callPet: function () {
+            return "Hi" + name + "! Good girl!"
+        },
+        playWithPet: function () {
+            return happy == true, hungry == true, clean == true
+        },
+        feedPet: function (petFood) {
+            return hungry == false, sleepy == true, petFood -= 1
+        },
+        makePetSleep: function () {
+            return sleepy == false, happy == false, hungry == true, age++
+        },
+        cleanPet: function (soap) {
+            return happy == false, clean == true, soap -= 1
+        }
     }
+
+
 
     //Methods
         // 1) callPet() - call’s out pet name

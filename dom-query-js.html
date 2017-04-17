@@ -7,6 +7,7 @@
 <body>
 
 <h1 id="main-header">Hello World!</h1>
+
 <ul>
     <li data-dbid="1">Item 1</li>
     <li data-dbid="2">Item 2</li>
@@ -14,6 +15,12 @@
     <li data-dbid="4">Item 4</li>
     <li data-dbid="5">Item 5</li>
 </ul>
+
+<button id="btn1">Change Header</button>
+<button id="btn2">Change List Items</button>
+<button id="btn3">Change Sub-Header</button>
+<button id="btn4">Change Paragraph</button>
+
 <h2 id="sub-header">Hello Again.</h2>
 <p class="sub-paragraph">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
@@ -29,38 +36,96 @@
     (function() {
         "use strict";
         // TODO: Uncomment next line and get the main header element by id
-        var mainHeader = document.getElementById("main-header");
+        //var mainHeader = document.getElementById("main-header");
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
+        //mainHeader.innerHTML = "Javascript is Cool";
+
+        //button to change header text:
+        var mainHeader = document.getElementById("main-header");
+
+        function changeHeader () {
         mainHeader.innerHTML = "Javascript is Cool";
+        }
+
+        btn1.addEventListener('click', changeHeader)
+
+
 
         // TODO: Uncomment the next line and get the sub header element by id
-        var subHeader = document.getElementById("sub-header");
+        //var subHeader = document.getElementById("sub-header");
 
         // TODO: Set the text color of subHeader to blue
-        subHeader.style.color = 'blue';
+        //subHeader.style.color = 'blue';
+
+        //button to change subheader color:
+        var subHeader = document.getElementById("sub-header");
+
+        function changeSubheaderColor () {
+            subHeader.style.color = 'blue';
+        }
+
+        btn3.addEventListener('click', changeSubheaderColor)
 
         // TODO: Uncomment the next line and get all list items
-        var listItems = document.getElementsByTagName('li');
+        //var listItems = document.getElementsByTagName('li');
 
         // TODO: Set text color on every other list item to grey
-        for (var i = 0; i < listItems.length; i += 2) {
+        /*for (var i = 0; i < listItems.length; i += 2) {
             if(listItems[i].getAttribute("data-dbid") == 1) {
                 listItems[i].style.color = 'blue';
                 continue;
             }
             listItems[i].style.color = '#868686';
         }
-
+        */
         // TODO: Set text color of li with dbid = 1 to blue
-//        listItems[0].style.color = 'blue';
+        // listItems[0].style.color = 'blue';
 
+        //change li styles:
+        var listItems = document.getElementsByTagName('li');
+
+        function changeListItems () {
+            listItems[0].style.color = 'blue';
+            for (var i = 0; i < listItems.length; i += 2) {
+                if(listItems[i].getAttribute("data-dbid") == 1) {
+                    listItems[i].style.color = 'blue';
+                    continue;
+                }
+                listItems[i].style.color = '#868686';
+            }
+        }
+        btn2.addEventListener('click', changeListItems)
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-        var subParagraphs = document.getElementsByClassName("sub-paragraph");
+        //var subParagraphs = document.getElementsByClassName("sub-paragraph");
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraphs[0].innerText = "Mission Accomplished!";
+        //subParagraphs[0].innerText = "Mission Accomplished!";
+
+        //change paragraph text:
+
+        var subParagraphs = document.getElementsByClassName("sub-paragraph");
+
+        function changeParagraph () {
+            subParagraphs[0].innerText = "Mission Accomplished!";
+        }
+
+        btn4.addEventListener('click', changeParagraph)
+
+        /*Bonus:
+        --Create a stopwatch app with the following feature:
+        1. stop watch display that shows the time to the nearest 100th of a second
+        2. start button to start
+        3. reset button
+        4. pause button
+        5. store a list of items in an aside div that are appended ever time reset button is hit
+        6. add delete buttons for each stored time that removes the tim fom the aside div
+        7. add keyboard events to control starting, pausing and resetting
+         */
+
+
+
     })();
 </script>
 </body>
