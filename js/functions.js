@@ -82,7 +82,6 @@ Create 2 functions:
 function randomNumber(max, min) {
     return random = Math.floor(Math.random()* (max - min))+ min;
 }
-
 console.log(randomNumber(200, 100));
 
 
