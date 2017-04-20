@@ -8,7 +8,7 @@
 <h1 id="first-hello">Hi</h1>
 <ul id="list">
     <li class="codeup">Fer</li>
-    <li class="">Justin</li>
+    <li class="codeup">Justin</li>
     <li class="codeup">Ryan</li>
 </ul>
 <h1 id="second-hello">Hello</h1>
@@ -23,7 +23,9 @@
         crossorigin="anonymous"></script>
 <script>
     $(document).ready(function(){
-        console.log("ready");
+        $('li').css('font-size', '20px');
+        $('h1, p, li').css('border', '1px solid red');
+        alert($('h1').text());
     });
 </script>
 </body>
