@@ -31,6 +31,12 @@
     pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
+<div id="stopwatch">
+    <span id="minutes">00</span> : <span id="seconds">00</span> : <span id="milliSecond">00</span>
+</div>
+<button id="btnStart">Start</button>
+<button id="btnReset">Reset</button>
+<button id="btnPause">Pause</button>
 
 <script>
     (function() {
@@ -111,7 +117,7 @@
             subParagraphs[0].innerText = "Mission Accomplished!";
         }
 
-        btn4.addEventListener('click', changeParagraph)
+        btn4.addEventListener('click', changeParagraph);
 
         /*Bonus:
         --Create a stopwatch app with the following feature:
@@ -124,7 +130,21 @@
         7. add keyboard events to control starting, pausing and resetting
          */
 
+        var stopWatch = document.getElementById("stopwatch");
+        var milliSecond = document.getElementById("milliSecond");
+        var startTimer = 0;
+        var interval = 60000;
 
+
+        var intervalID = setInterval(function updateMilliSeconds() {
+
+        if (startTimer == 0) {
+            milliSecond
+        } else if (startTimer == 60) {
+            clearInterval;
+        }
+         startTimer--;
+        }, interval);
 
     })();
 </script>

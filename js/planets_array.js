@@ -100,9 +100,9 @@
         }
         console.log(game);
 
-        if (game == win) {
+        if (game === win) {
             console.log('You won!');
-        } else if (game == lose) {
+        } else if (game === lose) {
             console.log('You lost!');
         } else {
             console.log('Try again!')

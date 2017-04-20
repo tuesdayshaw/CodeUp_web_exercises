@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Google Maps API</title>
+    <style type="text/css">
+        #map-canvas2 {
+            width: 500px;
+            height: 500px;
+        }
+        #addressInput, #btn , #lat, #lng, #plus, #minus {
+            height: 50px;
+        }
+        #map-canvas3 {
+            width: 500px;
+            height: 500px;
+        }
+        #map-canvas4 {
+            width: 770px;
+            height: 481px;
+        }
+    </style>
+</head>
+<body>
+
+<!--Map 2-->
+    <br>
+    <label for="addressInput">Address Search:</label>
+    <input type="text" id="addressInput">
+
+    <button type="submit" id="btn">Locate</button>
+
+    <div id="map-canvas2"></div>
+
+<!--Map 3-->
+    <br>
+    <label for="lat">Latitude:</label>
+    <input type="text" id="lat" value="29.426786408957845">
+
+    <label for="lng">Longitude:</label>
+    <input type="text" id="lng" value="-98.48966855000003">
+
+    <button id="update">Update Map:</button>
+
+    <label>Zoom:</label>
+    <button id="plus">+</button>
+    <button id="minus">-</button>
+
+    <div id="map-canvas3"></div>
+
+<!--Map 4-->
+    <br>
+    <div id="map-canvas4"></div>
+
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCL7bBwOChaAOln6rw3wCN1mNY1haPa-Eo"></script>
+    <script src="js/google-maps.js"></script>
+</body>
+</html>
