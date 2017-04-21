@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+
 <body>
+
 <h1 id="first-hello">Hi</h1>
+
 <ul id="list">
     <li class="codeup">Fer</li>
     <li class="codeup">Justin</li>
     <li class="codeup">Ryan</li>
 </ul>
+
 <h1 id="second-hello">Hello</h1>
+
 <div id="codeup">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam, aliquid architecto dignissimos dolor
     dolore facere, impedit inventore laboriosam minus non pariatur qui sequi tempore voluptas. Accusantium adipisci aut
     dignissimos repellendus, suscipit ullam unde voluptates!
 </div>
+
 <p id="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam debitis esse maiores obcaecati placeat tempore.</p>
+
 <div>
     <button id="close">Close Me</button>
 </div>
@@ -25,8 +33,11 @@
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous">
+</script>
+
 <script>
+
     $(document).ready(function(){
         $('h1').click(function () {
             $('h1').css('background-color', 'pink')
@@ -44,12 +55,13 @@
             });
 
         $('#close').click(function () {
-            $(location).attr('href', 'http://www.google.com'),
-                $(location).attr('href', 'http://www.google.com'),
-                $(location).attr('href', 'http://www.google.com'),
-                $(location).attr('href', 'http://www.google.com')
+            window.open('http://www.google.com');
+            window.open('http://www.amazon.com');
+            window.open('http://www.etsy.com');
+            window.open('http://www.ebay.com');
         });
     });
+
 </script>
 </body>
 </html>
