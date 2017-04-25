@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+    <style>
+        body {
+            background-image: url("img/stripes.png");
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        #box {
+            display: none;
+            text-align: center;
+        }
+        h1, img {
+            text-align: center;
+            background-position: center;
+        }
+        h1 {
+            font-size: 6em;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Konami Code<br> To Enter</h1>
+
+<div id="box">
+    <img id="pup" src="img/dog-clipart.jpg">
+    <audio id="bark"><source src="puppybark.mp3" type="audio/mp3"></audio>
+    <iframe  id="trophy" src="//giphy.com/embed/1tMAf3nLWDujC" width="480" height="400.32" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+</div>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous">
+</script>
+
+<script>
+
+    $(document).ready(function () {
+        "use strict";
+
+        $('#box').hide();
+
+        var konamiPattern = [38, 38, 40, 40, 37, 39, 37, 39, 65, 66, 13];
+        var keys = [];
+
+        $(document).keyup(function (event) {
+            if (event.keyCode === konamiPattern[keys++]) {
+                if (keys === konamiPattern.length) {
+                    $('body').css('background-image', 'none');
+                    $('body').css('background-color', '#ED5C64');
+                    $('h1').text('SUCCESS!');
+                    $('h1').css('color', '#093C3F');
+                    $( "h1" ).animate({
+                        width: "100%",
+                        opacity: 0.4,
+                        marginTop: "0.6in",
+                        fontSize: "10em",
+                        borderWidth: "10px"
+                    }, 1500 );
+                    $('#box').show();
+                    $('#pup').slideUp(3000);
+                    $('#bark').trigger("play");
+                    $('#trophy').show();
+                }
+            }
+        })
+    });
+
+</script>
+</body>
+</html>

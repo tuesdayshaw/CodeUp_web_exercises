@@ -39,27 +39,31 @@
 <script>
 
     $(document).ready(function(){
-        $('h1').click(function () {
-            $('h1').css('background-color', 'pink')
-        });
+       "use strict";
 
-        $('p').dblclick(function () {
-            $('p').css('font-size', '18px')
-        });
+       $(document).keydown(function(){
+           console.log("something");
+       });
 
-        $('li').hover(
-            function () {
-                $(this).css('color', 'red')},
-            function () {
-                $(this).css('color', 'white')
-            });
+       $(document).keypress(function () {
+           console.log(event.keyCode)
+       });
 
-        $('#close').click(function () {
-            window.open('http://www.google.com');
-            window.open('http://www.amazon.com');
-            window.open('http://www.etsy.com');
-            window.open('http://www.ebay.com');
-        });
+       $(document).keyup(function (e) {
+           console.log(e.keyCode)
+       });
+
+       $("p").on("mouseover", function (e) {
+           console.log("p")
+       });
+
+       $("p").off();
+
+       $(document).on("keydown", function (e) {
+           if(e.keyCode == 32) {
+               e.preventDefault()
+           }
+       })
     });
 
 </script>
