@@ -34,6 +34,7 @@
 
         .box button {
             position: absolute;
+            bottom: -40px
         }
 
         #left {
@@ -54,11 +55,6 @@
         ul {
             display: none
         }
-
-        #delayed {
-            display: none;
-        }
-
     </style>
 </head>
 <body>
@@ -225,12 +221,15 @@
 
         setTimeout(function () {
             $('#myModal').modal('show');
-        }, 2000);
+        }, 8000);
 
+
+    });
 
 //        Bonus:
 //
-//            Create 3 divs that look like a picture Frame, each one has a unique background image, create a button under each image that swaps the image from the frame. Use Traversing functions of jQuery.
+//            Create 3 divs that look like a picture Frame, each one has a unique background image, create a butto
+    //        under each image that swaps the image from the frame. Use Traversing functions of jQuery.
 //
 //            The rules are the following:
 //
@@ -251,12 +250,10 @@
 //    a. create a customized win message based on which player won
 //    b. change the css of the tiles that create the three-in-a-row winning pattern
 //
-//    3) ***EXTRA HARD CHALLENGE*** create a playable AI opponent that will play defensively if you are a click away from
-//    winning and offensively otherwise.
+//    3) ***EXTRA HARD CHALLENGE*** create a playable AI opponent that will play defensively if you are a click away
+    // from winning and offensively otherwise.
 
 
-
-    });
 </script>
 </body>
 </html>
