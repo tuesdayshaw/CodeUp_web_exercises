@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax Blog</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+        #blog-content {
+            padding: 20px;
+        }
+        h2 {
+            color: #67AF39;
+            text-align: center;
+        }
+        #cat {
+            color: blue;
+        }
+        h1 {
+            text-align: center;
+            color: coral;
+        }
+        #story {
+            text-indent: 20px;
+            padding: 20px;
+
+        }
+        #bottom {
+            margin-bottom: 100px;
+        }
+    </style>
+</head>
+<body>
+<h1>My Blog</h1>
+<div id="blog-content"></div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+<script>
+    (function(){
+        "use strict";
+
+        var blog = "data/blog.json";
+        var posts = '';
+
+        function updateBlog(data) {
+            data.forEach(function (el, i) {
+                posts += '<h2 class="panel panel-warning">' + data[i].title + '</h2>';
+                posts += '<p id="story">' + data[i].content + '</p>';
+                posts += '<p id="cat" class="well well-sm">' + "Categories: " + data[i].categories + '</p>';
+                posts += '<p id="bottom" class="well well-sm">' + "Date: " + data[i].date + '</p>';
+            })
+        }
+
+        function requestInfo() {
+            $.get(blog).done(function (data) {
+                updateBlog(data);
+                $('#blog-content').html(posts);
+            })
+        }
+
+        requestInfo();
+
+    })();
+
+
+</script>
+</body>
+</html>

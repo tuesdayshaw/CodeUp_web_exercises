@@ -11,10 +11,6 @@
             display: none;
         }
 
-        .visible {
-            display: block;
-        }
-
         .highlight {
             background-color: yellow;
         }
@@ -22,6 +18,7 @@
         #container {
             text-align: center;
             position: relative;
+            margin-bottom: 50px;
         }
 
         .box {
@@ -56,6 +53,7 @@
             display: none
         }
     </style>
+
 </head>
 <body>
 
@@ -65,7 +63,7 @@
 </div>
 
 
-<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" id="myModal">
     <div class="modal-dialog modal-sm" role="document">
         <div class="modal-content">
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Would you like to
@@ -160,14 +158,19 @@
 </ul>
 
 <button id="highlight-last" type="button">Highlight Last Fact</button>
+
 <div id="container">
-    <div id="left" class="box"></div>
-    <div id="center" class="box"></div>
-    <div id="right" class="box"></div>
-    <br>
-    <button>Swap</button>
-    <button>Swap</button>
-    <button>Swap</button>
+
+    <div id="left" class="box">
+        <button id="btn-left">Swap</button>
+    </div>
+    <div id="center" class="box">
+        <button id="btn-center">Swap</button>
+    </div>
+    <div id="right" class="box">
+        <button id="btn-right">Swap</button>
+    </div>
+
 </div>
 
 
@@ -185,7 +188,7 @@
 
         $('#on-off').click(function (event) {
             event.preventDefault();
-            $('.invisible').toggleClass('visible');
+            $('dd').toggleClass('invisible');
         });
 
         $('dt').click(function (event) {
@@ -219,16 +222,20 @@
             $('click').alert('close')
         });
 
+        $("#newsletter").hide().delay(2000).fadeIn();
+
         setTimeout(function () {
             $('#myModal').modal('show');
-        }, 8000);
+        }, 2000);
+//Bonus 1:
+
 
 
     });
 
 //        Bonus:
 //
-//            Create 3 divs that look like a picture Frame, each one has a unique background image, create a butto
+//            Create 3 divs that look like a picture Frame, each one has a unique background image, create a button
     //        under each image that swaps the image from the frame. Use Traversing functions of jQuery.
 //
 //            The rules are the following:
@@ -239,19 +246,9 @@
 //
 //            The right frame swaps to the left and takes the image from the frame in the center.
 
-//        **BONUS EXERCISE: TIC TAC TOE GAME
-//
-//        1) Create a clickable tic-tac-toe board with creative animation effects
-//    a. clicks should alternate between the unicode symbol for an X and circle when clicking the tiles
-//    b. the current player’s turn should be displayed after each click
-//    c. clicked tiles should no longer be clickable
-//
-//    2) **Hard Challenge** Make the tic-tac-toe game playable by detecting when a player gets three-in-a-row
-//    a. create a customized win message based on which player won
-//    b. change the css of the tiles that create the three-in-a-row winning pattern
-//
-//    3) ***EXTRA HARD CHALLENGE*** create a playable AI opponent that will play defensively if you are a click away
-    // from winning and offensively otherwise.
+
+
+
 
 
 </script>

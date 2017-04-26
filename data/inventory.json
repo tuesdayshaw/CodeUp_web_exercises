@@ -64,6 +64,14 @@
             "tool"
         ],
         "price": 25
-    }
+    },
+  {
+    "title": "Box of Nails",
+    "quantity": 50,
+    "categories": [
+      "tool"
+    ],
+    "price": 10
+  }
 ]
-]
+
