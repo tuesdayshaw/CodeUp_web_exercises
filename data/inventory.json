@@ -72,6 +72,14 @@
       "tool"
     ],
     "price": 10
+  },
+  {
+    "title": "Pliers",
+    "quantity": 30,
+    "categories": [
+      "tool"
+    ],
+    "price": 8
   }
 ]
 
