@@ -18,7 +18,7 @@ $(document).ready(function(){
     };
     var mapOptions = {
         center: markerPosition,
-        zoom: 10
+        zoom: 8
     };
 
 
@@ -33,7 +33,7 @@ $(document).ready(function(){
         });
 
         marker.addListener('dragend', function(event) {
-            map.setZoom(14);
+            map.setZoom(8);
             map.setCenter(marker.getPosition());
             lat = this.position.lat();
             lng = this.position.lng();
@@ -52,14 +52,20 @@ $(document).ready(function(){
 
     function getCity(data){
         var city = '';
-        city += '<h2>' + data.city.name + '</h2>';
-        $('#cityInfo').html(city);
+        $('#cityInfo').html(data.city.name);
     }
 
     function weatherReport(data, i) {
         var content = '';
-        data.list.forEach(function (el) {
-            content += '<div class="weather col-xs-4">' + '<h2 id="temp">' + el.temp.max.toFixed(0) + '°' + '/ ' + el.temp.min.toFixed(0) + '°' + '</h2>';
+
+
+        data.list.forEach(function (el, index) {
+
+            var day;
+            day = moment.unix(el.dt).format("dddd, MMMM Do");
+
+            content += '<div class="weather col-xs-4">' + '<p>' + day + '</p>';
+            content += '<h2 id="temp">' + el.temp.max.toFixed(0) + '°' + '/ ' + el.temp.min.toFixed(0) + '°' + '</h2>';
             content += '<p>' + '<img src="http://openweathermap.org/img/w/' + el.weather[0].icon + '.png">' + '</p>';
             content += '<p>' + el.weather[0].main + ': ' + el.weather[0].description + '</p>';
             content += '<p>' + 'Humidity: ' + el.humidity + '</p>';
@@ -68,8 +74,6 @@ $(document).ready(function(){
         });
         $('#report').html(content);
     }
-
-    function getBackground()
 
     function getWeather() {
         $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
@@ -80,15 +84,17 @@ $(document).ready(function(){
             units: 'Imperial'
         }).done(function (data) {
             console.log(data);
+
             getCity(data);
             weatherReport(data);
+
+            $('body').css('background-image', 'url(../img/' + data.list[0].weather[0].main + '.gif)');
+
         }).fail(function () {
             console.log("Failed")
         })
     }
     getWeather();
 
-    var today = new Date();
-    console.log(today.getDate());
 
 });
