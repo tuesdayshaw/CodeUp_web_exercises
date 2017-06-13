@@ -20,25 +20,29 @@ $(document).ready(function(){
         center: markerPosition,
         zoom: 8
     };
-
-
-    // Google Map:
     var btn = document.getElementById('btn');
     var address = document.getElementById('locationSearch');
     var geocoder = new google.maps.Geocoder();
 
-    function locationGeoCode() {
 
-        geocoder.geocode({"address": address.value}, function (results, status) {
-            if (status === 'OK'){
-                map.setCenter(results[0].geometry.location)
-            } else {
-                alert("Address not found")
-            }
-        });
-        address.value = '';
-    }
-    btn.addEventListener('click', locationGeoCode);
+    // Google Map:
+
+    // function locationGeoCode() {
+    //
+    //     geocoder.geocode({"address": address.value}, function (results, status) {
+    //         console.log(status);
+    //         if (status === 'OK'){
+    //             map.setCenter(results[0].geometry.location);
+    //             lat = this.position.lat();
+    //             lng = this.position.lng();
+    //         } else {
+    //             alert("Address not found")
+    //         }
+    //     });
+    //     address.value = '';
+    // }
+
+
 
     function createMarker() {
         var marker = new google.maps.Marker({
@@ -72,11 +76,10 @@ $(document).ready(function(){
         $('#cityInfo').html(data.city.name);
     }
 
+    btn.addEventListener('click', getCity);
 
     function weatherReport(data, i) {
         var content = '';
-
-
         data.list.forEach(function (el, index) {
 
             var day;
@@ -85,18 +88,17 @@ $(document).ready(function(){
             content += '<div id="focus" class="weather col-xs-4">' + '<p>' + day + '</p>';
             content += '<h2 id="temp">' + el.temp.max.toFixed(0) + '°' + '/ ' + el.temp.min.toFixed(0) + '°' + '</h2>';
             content += '<p>' + '<img src="http://openweathermap.org/img/w/' + el.weather[0].icon + '.png">' + '</p>';
-            content += '<p>' + el.weather[0].main + ': ' + el.weather[0].description + '</p>';
-            content += '<p>' + 'Humidity: ' + el.humidity + '</p>';
+            content += '<p>' + el.weather[0].description + '</p>';
+            content += '<p>' + 'Humidity: ' + el.humidity + '%' + '</p>';
             content += '<p>' + 'Wind: ' + el.speed + '</p>';
             content += '<p>' + 'Pressure: ' + el.pressure + '</p>' + '</div>';
         });
         $('#report').html(content);
     }
 
-    $('#focus').hover(function (e) {
-        (this).css('background-color', 'rgba(0, 0, 0, 1)')
-    });
-
+    // $('#focus').hover(function (e) {
+    //     ('#focus').css('background-color', 'rgba(0, 0, 0, 1)')
+    // });
 
     function getWeather() {
         $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {

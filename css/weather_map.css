@@ -8,9 +8,13 @@ body {
     background-color: #2aabd2;
 }
 
+#grid {
+    width: 100%;
+    margin: auto;
+}
+
 #effects {
     background-size: cover;
-    z-index: 0;
     width: 100%;
     height: 100%;
 }
@@ -21,7 +25,6 @@ body {
     width: 100%;
     margin-top: 30px;
     margin-bottom: 30px;
-    z-index: 1;
     color: whitesmoke;
     background-color: rgba(0, 0, 0, 0.4);
     height: 60px;
@@ -65,4 +68,56 @@ body {
     border: 4px solid black;
     margin-left: 137px;
     margin-bottom: 100px;
+}
+
+@media screen and (max-width: 800px) {
+    #grid {
+        width:100%;
+        max-width: 800px;
+        justify-content: center;
+    }
+    #header {
+        width: 80%;
+        max-width: 800px;
+        height: auto;
+        margin: 10px;
+    }
+    .weather {
+        width: 80%;
+        max-width: 800px;
+        margin: 10px;
+        border-radius: 0;
+    }
+    #google-map {
+        width: 90%;
+        max-width: 800px;
+        margin: 5px;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    #grid {
+        width: 100%;
+        max-width: 400px;
+        justify-content: center;
+    }
+    #header {
+        width: 80%;
+        max-width: 400px;
+        height: auto;
+        margin: 10px;
+    }
+    .weather {
+        width: 80%;
+        max-width: 400px;
+        height: auto;
+        margin: 10px;
+        border-radius: 0;
+    }
+    #google-map {
+        width: 80%;
+        max-width: 100%;
+        margin: 2%;
+    }
 }

@@ -1,0 +1,52 @@
+.container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    background-color: lightgray;
+}
+.box {
+    width: 25%;
+    max-width: 250px;
+    padding: 20px;
+    border: 1px solid black;
+    display: inline-block;
+    margin: auto;
+}
+.red {
+    background-color: lightpink;
+}
+.blue {
+    background-color: lightblue;
+}
+.yellow {
+    background-color: lightgoldenrodyellow;
+}
+.btn {
+    background-color: black;
+    color: whitesmoke;
+    height: 50px;
+}
+.active {
+    background-color: whitesmoke;
+    color: black;
+    height: 50px;
+}
+
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: 100%;
+    }
+    .box {
+        width: 80%;
+        max-width: 600px;
+        margin:  10px;
+    }
+}
+
+
+
+
+
+
+/* Media queries go at bottom of css and from large to small queries */
